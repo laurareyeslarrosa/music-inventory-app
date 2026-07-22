@@ -15,7 +15,7 @@ type SongFormState = Omit<Song, "id"> & { id: number };
 
 const API_BASE_URL =
   import.meta.env.VITE_API_BASE_URL ??
-  "https://music-inventory-app-jjqy.onrender.com/";
+  "https://music-inventory-app-jjqy.onrender.com";
 const API_URL = `${API_BASE_URL}/api/Songs`;
 
 const createEmptyForm = (): SongFormState => ({
