@@ -77,4 +77,10 @@ app.UseCors("AllowFrontend");
 app.UseAuthorization();
 app.MapControllers();
 
+app.MapGet("/", () => Results.Ok(new
+{
+    status = "running",
+    environment = app.Environment.EnvironmentName
+}));
+
 app.Run();
